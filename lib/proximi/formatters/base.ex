@@ -1,10 +1,9 @@
 defmodule Proximi.Formatters.Base do
 
-  def format(results, endpoint, associations \\ []) do
-    atomized_endpoint = endpoint |> String.to_atom
-
+  def format(results, type) do
     results 
     |> deep_format_keys
+    |> to_struct(type)
   end
 
   def to_struct(opts, type) when is_list(opts) do
