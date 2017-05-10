@@ -27,6 +27,10 @@ defmodule Proximi.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:httpoison, "~> 0.11.1"},
+      {:exjsx, "~> 3.2.0", app: false},
+      {:inflex, "~> 1.7.0"}
+    ]
   end
 end
