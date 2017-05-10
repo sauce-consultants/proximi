@@ -60,13 +60,12 @@ defmodule Proximi.Client do
   def headers do
     %{
       "Content-Type" => "application/json",
-      # "Accept" => "application/json",
       "Authorization" => auth_header()
     }
   end
 
   defp auth_header do
-    "Bearer #{Application.get_env(:proximi, :token)}"
+    "Bearer #{Application.get_env(:proximi, :api_token)}"
   end
 
   def root_api_url do
